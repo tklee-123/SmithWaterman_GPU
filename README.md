@@ -1,44 +1,47 @@
 # SmithWaterman_GPU
-Running the "SmithWaterman_GPU" Project
-Clone the Repository:
+It looks like you are navigating into the SmithWaterman_GPU project, specifically into the web directory and then into the src directory. After that, you're running npm install and npm start. Here's how you can structure these commands in a README:
+
+# SmithWaterman_GPU
+
+SmithWaterman_GPU is a project that implements the Smith-Waterman algorithm for local sequence alignment with GPU acceleration.
+
+## Getting Started
+
+### Clone the Repository
+
 Open your terminal or command prompt and run the following command to clone the repository to your local machine:
 
-bash
-Copy code
+```bash
 git clone https://github.com/tklee-123/SmithWaterman_GPU.git
-Navigate to the Project Directory:
+
+### Navigate to the Project Directory
+
 Change your current working directory to the project's directory:
 
-bash
-Copy code
-cd smith_gpu
-Install Dependencies:
-If the project has any dependencies, install them. Typically, a Node.js project might have a package.json file containing dependencies listed. Run the following command:
+cd SmithWaterman_GPU
+cd web
+cd src
 
-bash
-Copy code
+### Install Dependencies
+
+Navigate to the web directory and install the project dependencies:
+
+cd SmithWaterman_GPU/web
 npm install
-Or if it's a Python project with a requirements.txt file:
 
-bash
-Copy code
-pip install -r requirements.txt
-Build the Project (if needed):
-Some projects require a build step. Check the project documentation for any build instructions. If it's a JavaScript project, you might need to run:
+### Run the Application
 
-bash
-Copy code
-npm run build
-Run the Application:
-Execute the command to run the application. Refer to the project documentation for the specific command. It might be something like:
+Start the application within the web directory:
 
-bash
-Copy code
 npm start
-Access the Application:
-Once the application is running, open a web browser and navigate to the provided URL or localhost address. It might be something like http://localhost:3000/.
 
-Additional Notes:
-If the project requires any configuration files (e.g., .env file), make sure to set them up according to the project documentation.
-If you encounter any issues during the setup, check the project's README or documentation for troubleshooting steps.
-If the project involves a backend server, ensure that it is running before attempting to access the application.
+After running these commands, you should be able to access the application in your web browser at the provided URL or localhost address.
+
+## Additional Notes
+
+- If the project requires any additional configuration or setup, refer to the project documentation.
+- If you encounter any issues during the setup, check the project's README or documentation for troubleshooting steps.
+- If the project involves a backend server, ensure that it is running before attempting to access the application.
+```
+
+Make sure to include any additional details or instructions specific to your project. If you have a separate backend server, you might want to include instructions for starting it before running the frontend
