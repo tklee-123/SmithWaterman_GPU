@@ -1,47 +1,44 @@
-# SmithWaterman_GPU
-It looks like you are navigating into the SmithWaterman_GPU project, specifically into the web directory and then into the src directory. After that, you're running npm install and npm start. Here's how you can structure these commands in a README:
+# Hướng Dẫn Sử Dụng SmithWaterman_GPU
+## Điều Kiện Set Up Trước Khi Chạy
+Để có thể chạy thành công ứng dụng, bạn cần thực hiện các bước set up sau:
+Cài đặt CUDA và trình biên dịch nvcc.
 
-# SmithWaterman_GPU
-
-SmithWaterman_GPU is a project that implements the Smith-Waterman algorithm for local sequence alignment with GPU acceleration.
-
-## Getting Started
-
-### Clone the Repository
-
-Open your terminal or command prompt and run the following command to clone the repository to your local machine:
-
-```bash
+## Các Bước Cài Đặt và Chạy Code
+### 1. Clone Repository:
+- Copy đường link repo.git: https://github.com/tklee-123/SmithWaterman_GPU.git.
+- Mở terminal và chạy lệnh sau để sao chép repository về máy local:
 git clone https://github.com/tklee-123/SmithWaterman_GPU.git
 
-### Navigate to the Project Directory
-
-Change your current working directory to the project's directory:
-
-cd SmithWaterman_GPU
-cd web
-cd src
-
-### Install Dependencies
-
-Navigate to the web directory and install the project dependencies:
-
+### 2. Mở Folder và Di Chuyển tới Thư Mục Web:
+- Mở folder vừa clone về trong VSCode.
+- Mở terminal trong VSCocde, di chuyển tới thư mục web:
 cd SmithWaterman_GPU/web
+
+### 3. Cài Đặt Dependencies Cho Server:
+- Di chuyển vào thư mục web/server và chạy các lệnh sau:
+cd server
+npm install express
+node server.js
+npm install react-scripts --save
+
+### 4. Quay Trở Lại Thư Mục Web và Cài Đặt Dependencies Cho React App:
+cd ..
 npm install
-
-### Run the Application
-
-Start the application within the web directory:
-
+npm install react-router-dom
 npm start
 
-After running these commands, you should be able to access the application in your web browser at the provided URL or localhost address.
+### 5. Mở Giao Diện React và Chạy Ứng Dụng:
+- Khi giao diện React hiển thị, bạn sẽ thấy Home page (trang chủ) của dự án chứa các thông tin giới thiệu chung. Trên Nav bar, bạn có thể click vào "APPLICATION" hoặc trên hero page click vào nút "Get Start" để di chuyển tới phần ứng dụng.
 
-## Additional Notes
+### 6. Giao Diện Phần Ứng Dụng (APPLICATION):
+- Khi giao diện phần ứng dụng hiển thị, bạn sẽ thấy thông tin giới thiệu về ứng dụng và hướng dẫn chạy.
 
-- If the project requires any additional configuration or setup, refer to the project documentation.
-- If you encounter any issues during the setup, check the project's README or documentation for troubleshooting steps.
-- If the project involves a backend server, ensure that it is running before attempting to access the application.
-```
+   - Bước 1: Click vào "Choose File", chọn file test có sẵn trong folder của dự án hoặc tự tạo file test theo yêu cầu. File test là file chứa chuỗi ADN với các ký tự là các nucleotit.
+  
+   - Bước 2: Sau khi hoàn tất chọn file, click vào "Run" để chạy thuật toán. Đợi khoảng 4-5 giây để màn hình hiển thị kết quả.
+  
+   - Bước 3: Đối chiếu kết quả nhận được với bảng trên màn hình để xác định đặc trưng gen của chuỗi ADN truyền vào.
 
-Make sure to include any additional details or instructions specific to your project. If you have a separate backend server, you might want to include instructions for starting it before running the frontend
+### 7. Xử Lý Lỗi Hiển Thị:
+
+Nếu có lỗi hiển thị, vui lòng kiểm tra và đảm bảo rằng bạn đã cài đặt thành công môi trường để chạy thuật toán.
