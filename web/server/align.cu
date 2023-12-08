@@ -376,7 +376,7 @@ std::vector<std::string> split(const std::string& s, char delimiter) {
     return tokens;
 }
 
-std::mutex scoresMutex;
+std::mutex mutex;
 
 // ... (Không thay đổi các hàm khác)
 
@@ -412,7 +412,6 @@ void process_and_compare_line(const std::string& line, std::vector<char>& seqA, 
         int score = result.second;
 
         std::pair<int, std::string> element(score, parts[1]);
-        std::lock_guard<std::mutex> lock(scoresMutex);
         scores.push_back(element);
 
         // GPU
@@ -440,6 +439,10 @@ void read_and_compare_sequences_from_file(const std::string& filename, std::vect
   // Process each line along with seqA
   while (std::getline(file, line)) {
       threads.emplace_back(process_and_compare_line, line, std::ref(seqA), std::ref(scores));
+      // for (const auto& score : scores) {
+      // std::cout << "Score " << i << "{" << score.first << ", " << score.second << "}" << std::endl;
+      // }
+      // i++;
   }
   // Wait for all threads to complete
   for (std::thread& t : threads) {
@@ -456,7 +459,7 @@ int main(int argc, char* argv[]) {
   }
 
   std::vector<char> seqA;
-  int length = countLines(".\\.\\.\\src\\dog.txt");
+  int length = countLines("dog.txt");
   std::cout << "Số chuỗi trong file tham chiếu:" << length << std::endl;
   //Read seqA from line 1
   read_sequence_from_file(argv[1], seqA, 1);
@@ -465,7 +468,7 @@ int main(int argc, char* argv[]) {
   const int num_threads = 2; // Get the number of available threads
   auto start_time = std::chrono::high_resolution_clock::now();
 
-  read_and_compare_sequences_from_file(".\\.\\.\\src\\dog.txt", seqA, scores, num_threads);
+  read_and_compare_sequences_from_file("dog.txt", seqA, scores, num_threads);
   std::cout << "Số điểm tương đồng được tính:" << scores.size() << std::endl;
   auto end_time = std::chrono::high_resolution_clock::now();
 

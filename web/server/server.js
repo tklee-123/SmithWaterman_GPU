@@ -13,7 +13,7 @@ app.use(cors({
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'D:\\Gpu-SW\\web\\upload'); // Replace with the actual path to the upload directory
+    cb(null, 'upload'); // Replace with the actual path to the upload directory
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);
@@ -35,8 +35,8 @@ app.post('/cuda', upload.single('file'), (req, res) => {
   const filePath = file.path;
 
   // Replace 'path_to_your_c_file' with the actual path to your C file
-  const cFilePath = 'D:\\Gpu-SW\\src\\align.cu';
-  const runPath = 'D:\\Gpu-SW\\src\\align';
+  const cFilePath = 'align.cu';
+  const runPath = 'align';
 
   // Execute the C file with the selected file path as an argument
   exec(`nvcc ${cFilePath} -o ${runPath} && ${runPath} ${filePath}`, (error, stdout, stderr) => {
