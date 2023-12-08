@@ -7,25 +7,33 @@ Cài đặt CUDA và trình biên dịch nvcc.
 ### 1. Clone Repository:
 - Copy đường link repo.git: https://github.com/tklee-123/SmithWaterman_GPU.git.
 - Mở terminal và chạy lệnh sau để sao chép repository về máy local:
+```
 git clone https://github.com/tklee-123/SmithWaterman_GPU.git
+```
 
 ### 2. Mở Folder và Di Chuyển tới Thư Mục Web:
 - Mở folder vừa clone về trong VSCode.
 - Mở terminal trong VSCocde, di chuyển tới thư mục web:
+```
 cd SmithWaterman_GPU/web
+```
 
 ### 3. Cài Đặt Dependencies Cho Server:
 - Di chuyển vào thư mục web/server và chạy các lệnh sau:
+```
 cd server
 npm install express
 node server.js
 npm install react-scripts --save
+```
 
 ### 4. Quay Trở Lại Thư Mục Web và Cài Đặt Dependencies Cho React App:
+```
 cd ..
 npm install
 npm install react-router-dom
 npm start
+```
 
 ### 5. Mở Giao Diện React và Chạy Ứng Dụng:
 - Khi giao diện React hiển thị, bạn sẽ thấy Home page (trang chủ) của dự án chứa các thông tin giới thiệu chung. Trên Nav bar, bạn có thể click vào "APPLICATION" hoặc trên hero page click vào nút "Get Start" để di chuyển tới phần ứng dụng.
@@ -42,3 +50,4 @@ npm start
 ### 7. Xử Lý Lỗi Hiển Thị:
 
 Nếu có lỗi hiển thị, vui lòng kiểm tra và đảm bảo rằng bạn đã cài đặt thành công môi trường để chạy thuật toán.
+
