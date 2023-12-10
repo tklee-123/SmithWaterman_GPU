@@ -51,16 +51,23 @@ input[type="file"] {
   padding: 10px;
   margin-right: 10px;
 }
-
-/* Style the "Run" button */
-button {
+.run-button {
   padding: 10px 15px;
-  background-color: #e74c3c;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.run-button {
+  background-color: #e74c3c;
+}
+
+.run-button:hover {
+  background-color: #c8655a;
+}
+
 
 /* Style the output and error containers */
 div > section > div + div {
@@ -71,7 +78,7 @@ h3 {
   color: #333;
 }
 
-pre {
+.init {
   font-size: 16px;
   padding: 10px;
   background-color: #f1f1f1;
@@ -79,10 +86,14 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   border-radius: 4px;
-  overflow: auto;
   height: 30px;
+  max-height: 200px; 
 }
 
+pre.output_screen {
+  height: fit-content;
+  overflow: scroll;
+}
 /* Style error text with a red color */
 pre + div > pre {
   color: #d9534f;
@@ -112,10 +123,6 @@ tr:hover {
 }
 
 
-/* Change button background color on hover */
-button:hover {
-  background-color: #e74c3c;
-}
 
 /* Add these styles to your stylesheet */
 
@@ -211,18 +218,7 @@ code {
   background-color: rgba(217, 83, 68, 0.7); /* Set a semi-transparent background color */
   border-radius: 20px;
 }
-button {
-  padding: 10px 15px;
-  background-color: #e74c3c;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-button {
-  background-image: linear-gradient(to bottom, #e74c3c, #ec7063);
-}
+
 /* Add this CSS to style the CTA button */
 .cta-button {
   display: inline-block;

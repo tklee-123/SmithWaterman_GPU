@@ -35,8 +35,8 @@ app.post('/cuda', upload.single('file'), (req, res) => {
   const filePath = file.path;
 
   // Replace 'path_to_your_c_file' with the actual path to your C file
-  const cFilePath = 'align.cu';
-  const runPath = 'align';
+  const cFilePath = 'demo.cu';
+  const runPath = 'demo';
 
   // Execute the C file with the selected file path as an argument
   exec(`nvcc ${cFilePath} -o ${runPath} && ${runPath} ${filePath}`, (error, stdout, stderr) => {

@@ -91,22 +91,12 @@ function Home() {
             Vương Thị Diễm Quỳnh <br/>
             MSV 21000415 
             
-          {/* <div className="rounded-image-container">
-          
-              <img
-                src={vuongQuynhImage}
-                alt="Vuong Thi Diem Quynh"
-                className="rounded-image"
-              />
-            
-          </div> */}
         </div>
     </div>
     <p><strong>Giáo viên hướng dẫn:</strong> TS.Trần Hà Nguyên</p>
 
     <h2>Project Resources</h2>
-        <p><strong>Báo cáo:</strong> <a href="link_to_your_report.pdf" target="_blank">Read the Report</a></p>
-        <p><strong>Mã nguồn:</strong> <a href="link_to_your_github_repository" target="_blank">GitHub Repository</a></p>
+        <p><strong>Mã nguồn:</strong> <a href="lhttps://github.com/tklee-123/SmithWaterman_GPU/tree/main" target="_blank">GitHub Repository</a></p>
         <p><strong>Hướng Dẫn Cài Đặt và Chạy:</strong></p>
         <ol>
             <li>Clone the GitHub repository: <code>git clone https://github.com/your-username/your-repository.git</code></li>
@@ -115,8 +105,6 @@ function Home() {
             <li>Run the code: <code>npm start</code></li>
         </ol>
     
-    <h2>Application</h2>
-        <p><strong>Try it out:</strong> <a href="/app" target="_self">Here</a></p>
 
     
 </section>
@@ -149,18 +137,6 @@ function Algorithm() {
           Thuật toán Smith-Waterman có khả năng xử lý sự dịch chuyển và chèn/xóa (insertion/deletion) giữa các chuỗi. Do đó, nó thường được sử dụng trong các ứng dụng như tìm kiếm gen trong chuỗi genôm, so sánh protein, hay tìm kiếm đoạn con tương đồng trong dữ liệu sinh học.
         </p>
       </section>
-    </div>
-  );
-}
-
-function AboutUs() {
-  return (
-    <div>
-      <h1>Nhóm 2:</h1>
-      <p>Dương Ngọc Thái</p>
-      <p>Mai Bá Đức</p>
-      <p>Hoàng Xuân Quý</p>
-      <p>Nguyễn Ngọc Anh</p>
     </div>
   );
 }
@@ -218,62 +194,31 @@ function Smith() {
       <div>
       Mỗi điểm tương đồng được ghi lại, và sau đó, chuỗi gen nào có điểm tương đồng cao nhất sẽ được chọn làm đặc trưng dự đoán cho mẫu đầu vào. Quá trình này không chỉ giúp xác định đặc trưng gen một cách chính xác mà còn mở ra khả năng tìm kiếm trong cơ sở dữ liệu lớn.
       </div>
-      <table>
-        <tr>
-            <th>Nhãn</th>
-            <th>Đặc trưng gen</th>
-            {/* <th>Nhãn</th> */}
-        </tr>
-        <tr>
-            <td >1</td>
-            <td>Genes Điều Khiển Chu Kỳ Sinh Học</td>
-            {/* <td>4</td> */}
-        </tr>
-        <tr>
-            <td >2</td>
-            <td>Genes Chống Ô Nhiễm</td>
-            {/* <td>4</td> */}
-        </tr>
-        <tr>
-            <td >3</td>
-            <td>Genes Hệ Thống Miễn Dịch</td>
-            {/* <td>4</td> */}
-        </tr>
-        <tr>
-            <td >4</td>
-            <td>Genes Chống Ung Thư</td>
-            {/* <td>4</td> */}
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Genes Điều Khiển Phát Triển Embryo</td>
-            {/* <td>6</td> */}
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Genes Điều Khiển Chuyển Gen</td>
-            {/* <td>5</td> */}
-        </tr>
-    </table>
     
     <div class="steps">
       Các bước thực hiện:
       <br/>
       Bước 1: Click vào <code>Choose File</code> để tải lên file chứ chuỗi gen muốn so sánh.<br/>
 Bước 2: Sau khi hoàn tất tải lên file, click vào <code>Run</code>.<br/>
-Bước 3: So sánh kết quả với bảng mô tả ở phía trên để xác định gen đặc trưng tương đồng nhất với chuỗi gen đầu vào.<br/>
+Bước 3: Kiểm tra kết quả, kết quả trả về là dự đoán đặc trưng và chuỗi con mang đặc trưng đó<br/>
+
       </div>
 
         <h2>Thực hiện</h2>
         <div class="output">
           <input type="file" onChange={handleFileChange} />
-          <button onClick={executeCode}>Run</button>
+          <button class = "run-button" onClick={executeCode}>Run</button>
         </div>
         <div class="output">
-          <h3>Kết quả dự đoán:</h3>
-          <pre>{output && (
-            <pre>{output.split('\n').slice(-2, -1)}</pre>
-          )}</pre>
+        <h3>Chuỗi con mang đặc trưng:</h3>
+          <pre class = "init">{output && 
+              <pre class="output_screen">{output.split('\n').slice(-2, -1)}</pre>
+          
+}</pre>
+          <h3>Đặc trưng gene</h3>
+          <pre class = "init">{output && (
+            <pre class="output_screen1">{output.split('\n').slice(-3, -2)}</pre>
+)}</pre>
           
         </div>
         {/* <div class="output">
@@ -303,5 +248,4 @@ function App() {
 }
 
 export default App;
-
 
