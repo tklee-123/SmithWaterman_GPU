@@ -23,8 +23,11 @@ cd web
 ```
 cd server
 npm install express
+<<<<<<< HEAD
 npm install multer
 npm install cors
+=======
+>>>>>>> f198a0862aaf2dca68c0e3ad5eef90006fce7455
 node server.js
 ```
 - Sau khi chạy thành công lệnh inline code `node server.js`, terminal sẽ hiển thị:
@@ -72,11 +75,17 @@ npm start
 - Khi giao diện React hiển thị, bạn sẽ thấy Home page (trang chủ) của dự án chứa các thông tin giới thiệu chung. Trên Nav bar, bạn có thể click vào "APPLICATION" hoặc trên hero page click vào nút "Get Start" để di chuyển tới phần ứng dụng.
 
 ### 6. Giao Diện Phần Ứng Dụng (APPLICATION):
+<<<<<<< HEAD
 ![Alt text](/Picture/Pic1.png)
 - Khi giao diện phần ứng dụng hiển thị, bạn sẽ thấy thông tin giới thiệu về ứng dụng và hướng dẫn chạy.
 
    - Bước 1: Click vào "Choose File", chọn file test có sẵn trong folder của dự án, file test có tên inline code `a.txt` hoặc inline code `b.txt` nằm trong thư mục SmithWaterman_GPU/src hoặc tự tạo file test theo yêu cầu. File test là file chứa chuỗi ADN với các ký tự là các nucleotit (A,T,G,C).
 ![Alt text](/Picture/Pic2.png)
+=======
+- Khi giao diện phần ứng dụng hiển thị, bạn sẽ thấy thông tin giới thiệu về ứng dụng và hướng dẫn chạy.
+
+   - Bước 1: Click vào "Choose File", chọn file test có sẵn trong folder của dự án, file test có tên inline code `a.txt` hoặc inline code `b.txt` nằm trong thư mục SmithWaterman_GPU/src hoặc tự tạo file test theo yêu cầu. File test là file chứa chuỗi ADN với các ký tự là các nucleotit.
+>>>>>>> f198a0862aaf2dca68c0e3ad5eef90006fce7455
   
    - Bước 2: Sau khi hoàn tất chọn file, click vào "Run" để chạy thuật toán. Đợi khoảng 4-5 giây để màn hình hiển thị kết quả.
   
@@ -91,3 +100,7 @@ Nếu có lỗi hiển thị, vui lòng kiểm tra và đảm bảo rằng bạn
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f198a0862aaf2dca68c0e3ad5eef90006fce7455
